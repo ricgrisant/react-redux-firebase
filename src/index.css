@@ -5,9 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #6403e5;
+  background-image: linear-gradient(to right, #221165 0%, #074a6b 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+form {
+  padding: 40px;
+  margin-top: 80px;
+  border-radius: 25px;
+}
+
+.card {
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 30px;
 }
