@@ -13,7 +13,7 @@ const config = {
     measurementId: "G-45G9ZEB5VR"
   };
 
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(config);
   firebase.firestore().settings({timestampsInSnapshots: true})
 
   export default firebase
