@@ -5,15 +5,22 @@ import { signOut } from '../../store/actions/authActions';
 
 
 const SignedInLinks = (props) =>{
+    const {initials} = props
     return (
 
         <ul className="right">
             <li><NavLink to= '/createproject'>New project</NavLink></li>
             <li><a onClick= {props.signOut}>Log Out</a></li>
-            <li><NavLink to= '/' className="btn btn-floating green lightn-1">RG</NavLink></li>      
+            <li><NavLink to= '/' className="btn btn-floating green lightn-1">{initials}</NavLink></li>      
         </ul>
 
     )
+}
+
+const mapStateToProps = (state)=>{
+    return{
+        initials: state.firebase.profile.initials
+    }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -23,4 +30,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(null, mapDispatchToProps)(SignedInLinks);
+export default connect(mapStateToProps, mapDispatchToProps)(SignedInLinks);
